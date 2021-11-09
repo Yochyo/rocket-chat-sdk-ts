@@ -1,0 +1,43 @@
+{
+  "name": "rocket-chat-sdk-ts",
+  "version": "1.0.0",
+  "description": "A rocket.chat SDK written in Typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --config jestconfig.json",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.{js,ts}\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepublishOnly": "npm test && npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yochyo/rocket-chat-sdk-ts.git"
+  },
+  "keywords": [
+    "rocket-chat-sdk-ts"
+  ],
+  "author": "Yochyo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yochyo/rocket-chat-sdk-ts/issues"
+  },
+  "homepage": "https://github.com/Yochyo/rocket-chat-sdk-ts#readme",
+  "dependencies": {
+    "@types/node": "^16.11.7",
+    "typescript": "^4.4.4"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.2",
+    "jest": "^27.3.1",
+    "prettier": "^2.4.1",
+    "ts-jest": "^27.0.7",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0"
+  },
+  "files": [
+    "lib/**/*"
+  ]
+}
